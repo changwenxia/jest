@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // H5 获取当前位置经纬度
+        var location_lon = '',location_lat = ''; // 经度,纬度
+        console.log(2);
+        if (navigator.geolocation){
+            console.log(1);
+            navigator.geolocation.getCurrentPosition(function (position) {
+                location_lon = position.coords.longitude;
+                location_lat = position.coords.latitude;
+            // alert('h5经度：'+location_lon);alert('h5纬度：'+location_lat);
+            });
+        }else {
+            alert("您的设备不支持定位功能");
+        }
+    </script>
+</body>
+</html>
